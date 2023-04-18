@@ -46,11 +46,10 @@ const handleSubmit=(event)=>{
        <button onClick={add}  type='submit'>Submit</button>
    </form>
       
-
-      <div>
+     <div className='card'>
         <ul>
         
-          {Array.map((val,ind)=>{
+           {Array.map((val,ind)=>{
               return (
                 <div>
                   <p><h3>{val.title} <button onClick={()=>deleteitem(ind)} className='btn-delete' type='submit'>X</button></h3>

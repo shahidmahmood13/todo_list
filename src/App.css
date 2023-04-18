@@ -7,7 +7,7 @@ form {
   border-radius: 5px;
   background-color: rebeccapurple;
   padding: 1;
-  margin: 10% 28% 26% 24%;
+  margin: 10% 28% 1% 24%;
   box-shadow: none;
   box-shadow: 2px 8px 27px rgba(26, 11, 30, 30.3);
 }
@@ -69,6 +69,10 @@ p{
   margin-top: -7%;
   cursor: pointer;
   
+}
+card{
+  background-color: #333;
+  margin-top: -22%;
 }
   
 
