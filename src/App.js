@@ -22,6 +22,24 @@ const deleteitem =(id)=>{
    setArry(Array.filter(item => item.id !== id));
     console.log(Array);
 }
+
+const Edititem= (val)=>{
+  setTitle(val.title);
+  setDeatils(val.detail);
+  SetDuedate(val.dueDate);
+
+  const updateArry = Array.map(item => {
+    
+     if (item.id === val.id){
+       return ([Array, {id:val.id,title: val.title,detail: val.details,dueDate: val.dueDate} ])
+     }
+     else{
+      return Array;
+     }
+     
+  })
+  setArry(updateArry)
+}
 const handleSubmit=(event)=>{
   event.preventDefault();
 }
@@ -52,7 +70,9 @@ const handleSubmit=(event)=>{
            {Array.map((val,ind)=>{
               return (
                 <div>
-                  <p><h3>{val.title} <button onClick={()=>deleteitem(ind)} className='btn-delete' type='submit'>X</button></h3>
+                  <p><h3>{val.title}
+                   <button onClick={()=>deleteitem(ind)} className='btn-delete' type='submit'>X</button>
+                   <button  onClick={()=>Edititem(val)} className='btn-delete' type='submit'>Edit</button></h3>
                      {val.detail}
                      <br></br>
                      {val.dueDate}
