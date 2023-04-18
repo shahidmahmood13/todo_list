@@ -10,8 +10,8 @@ const [dueDate,SetDuedate ]= useState('')
 const [Array ,setArry ]= useState([]);
 
 const add=()=>{
-  //  let id = Array.length;
-  setArry([...Array,{ title: title,detail: details,dueDate: dueDate}])
+   let id = Array.length;
+  setArry([...Array,{ id:id,title: title,detail: details,dueDate: dueDate}])
   // console.log(Array);
   setTitle('');
   setDeatils('');
